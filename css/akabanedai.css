@@ -1,135 +1,70 @@
-:root {
-  --clr-bg:      #ffffff;
-  --clr-text:    #333333;
-  --clr-accent:  #C59E47;
-  --clr-shadow:  rgba(0,0,0,0.08);
-  --navW:        220px;     
-  --gap:         32px;
-  --trans:       0.3s ease;
-  --maxW:        800px;
-}
-
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 body {
-  display: flex;
-  min-height: 100vh;
-  background: var(--clr-bg);
-  font-family: 'Lora', serif;
-  color: var(--clr-text);
+    background-color: #f5f5f5; 
+    margin: 0;
+    padding: 0;
 }
-
-
-.sidebar {
-  position: fixed;
-  top: 0; left: 0;
-  width: var(--navW);
-  height: 100%;
-  background: var(--clr-accent);
-  padding: var(--gap) 1rem;
-  box-shadow: 2px 0 8px var(--clr-shadow);
-  display: flex;
-  flex-direction: column;
+a {
+    display: inline-block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #1a237e;
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s;
+    font-family: "Hiragino Mincho ProN", "游明朝", "Yu Mincho", serif;
 }
-.sidebar a {
-  display: block;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  padding: 0.5rem 0.75rem;
-  border-radius: 4px;
-  transition: background var(--trans);
+a:hover {
+    border-bottom: 2px solid #1a237e;
+    background-color: #e0e0e0;
 }
-.sidebar a:hover,
-.sidebar a:focus {
-  background: rgba(255,255,255,0.2);
+nav {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
 }
-
-
-.content {
-  margin-left: var(--navW);
-  padding: var(--gap) 2rem;
-  flex: 1;
-  max-width: calc(100% - var(--navW));
+h1 {
+    font-size: 2em;              
+    margin-top: 30px;            
+    margin-bottom: 10px;        
+    color: #1a237e;           
+    border-left: 5px solid #1a237e;
+    padding-left: 10px; 
+    font-family: "Hiragino Mincho ProN", "游明朝", "Yu Mincho", serif;         
 }
-
-
-.content h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.8rem;
-  font-weight: 700;
-  margin-bottom: var(--gap);
+h2 {
+    font-size: 1.5em;
+    margin-top: 25px;
+    margin-bottom: 8px;
+    color: #1a237e;
+    border-bottom: 1px solid #1a237e; 
+    padding-bottom: 5px;
+    font-family: "Hiragino Mincho ProN", "游明朝", "Yu Mincho", serif;
+}
+h3 {
+    font-size: 1.2em;
+    margin-left: 20px;          
+    margin-top: 15px;
+    color: #1a237e;
+    font-family: "Hiragino Mincho ProN", "游明朝", "Yu Mincho", serif;
+}
+p {
+  font-size: 1.0em;
+  color: #1a237e;
+  margin-left: 15px;          
+  margin-top: 10px;
+  font-family: "Hiragino Mincho ProN", "游明朝", "Yu Mincho", serif;
+}
+.site-header {
+  background-color: #003366; 
+  padding: 20px 0;
   text-align: center;
-  position: relative;
 }
-.content h1::after {
-  content: "";
-  display: block;
-  width: 120px;
-  height: 3px;
-  background: var(--clr-accent);
-  margin: 12px auto 0;
-  border-radius: 2px;
+.site-header h1 {
+  color: #fff;             
+  font-size: 1.8rem;
+  margin: 0;
 }
-
-
-.content h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.6rem;
-  font-weight: 700;
-  margin-bottom: var(--gap);
-  border-bottom: 2px solid var(--clr-accent);
-  padding-bottom: 8px;
-  transition: color var(--trans);
+.site-title {
+  font-size: 2rem;
+  color: #003366;
 }
-.content h2:hover {
-  color: var(--clr-accent);
-}
-
-
-.content h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.3rem;
-  font-weight: 700;
-  margin-top: 1.5rem;
-  margin-bottom: 0.75rem;
-  padding-left: 8px;
-  border-left: 4px solid var(--clr-accent);
-  transition: color var(--trans);
-}
-.content h3:hover {
-  color: var(--clr-accent);
-}
-
-
-@media (max-width: 768px) {
-  :root { --navW: 180px; }
-  .sidebar {
-    padding: 24px 0.5rem;
-  }
-  .sidebar a {
-    font-size: 0.9rem;
-    padding: 0.4rem 0.6rem;
-  }
-  .content {
-    margin-left: var(--navW);
-    padding: 24px 1rem;
-  }
-  .content h1 {
-    font-size: 2.2rem;
-  }
-  .content h2 {
-    font-size: 1.4rem;
-  }
-  .content h3 {
-    font-size: 1.1rem;
-  }
-}
-
-
-
