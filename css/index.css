@@ -1,3 +1,72 @@
-.red{
-    color:red;
+html, body {
+  height: 100%;
+  margin: 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background-color: #F5F5F5;
+  color: #003366;
+}
+.site-header {
+  background-color: #003366; 
+  padding: 20px 0;
+  text-align: center;
+}
+.site-header h1 {
+  color: #fff;             
+  font-size: 1.8rem;
+  margin: 0;
+}
+.site-title {
+  font-size: 2rem;
+  color: #003366;
+}
+.campus-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;   
+  text-decoration: none;
+  position: relative;
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: bold;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s;
+}
+.campus-block::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  transition: background 0.3s;
+}
+.campus-block span {
+  position: relative;
+  z-index: 1;
+}
+.campus-block:hover::before {
+  background: rgba(0, 0, 0, 0.5);
+}
+.campus-block:hover {
+  transform: scale(1.02);
+}
+.campus-block.hakusan {
+  background-image: url("https://souken.movabletype.io/higher/.assets/2017_RCM205_30_TOP-0fe28fcc9.png");
+}
+.campus-block.akabanedai {
+  background-image: url("https://higano.co.jp/wp/wp-content/uploads/2023/07/toyo_01-scaled.jpg");
+}
+.campus-block.kawagoe {
+  background-image: url("https://gakuheya.chintaistyle.jp/column/wp-content/uploads/2022/06/toyo-kawagoe.jpg");
+}
+.campus-block.asaka {
+  background-image: url("https://asaka-wako.goguynet.jp/wp-content/uploads/sites/85/2024/11/IMG_9226.jpeg");
 }
