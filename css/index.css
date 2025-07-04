@@ -41,23 +41,6 @@ body {
   background-position: center;
   transition: transform 0.3s;
 }
-.campus-block::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.3);
-  transition: background 0.3s;
-}
-.campus-block span {
-  position: relative;
-  z-index: 1;
-}
-.campus-block:hover::before {
-  background: rgba(0, 0, 0, 0.5);
-}
-.campus-block:hover {
-  transform: scale(1.02);
-}
 .campus-block.hakusan {
   background-image: url("https://souken.movabletype.io/higher/.assets/2017_RCM205_30_TOP-0fe28fcc9.png");
 }
